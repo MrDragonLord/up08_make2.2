@@ -1,0 +1,14 @@
+@import './normalize';
+@import './varriables';
+@import './fonts';
+@import './ui';
+@import './mixins';
+
+@import './nav';
+@import './header';
+@import './main';
+@import './footer';
+
+body {
+	overflow-x: hidden;
+}

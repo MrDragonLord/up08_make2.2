@@ -1,0 +1,22 @@
+@font-face {
+	font-family: Acrom;
+	src: url('../../fonts/Acrom-Regular.ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: Acrom;
+	src: url('../../fonts/Acrom-Medium.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: Acrom;
+	src: url('../../fonts/Acrom-Bold.ttf');
+	font-weight: 700;
+}
+
+body {
+	font-family: Acrom;
+	color: $text-color;
+}

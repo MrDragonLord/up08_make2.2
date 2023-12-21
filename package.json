@@ -1,0 +1,12 @@
+{
+  "name": "task2.1",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "sass --watch --no-source-map assets/scss/global.scss assets/css/style.css",
+    "build": "sass --no-source-map assets/scss/global.scss assets/css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

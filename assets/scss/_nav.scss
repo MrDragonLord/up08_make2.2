@@ -1,0 +1,141 @@
+.nav {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #f3f8fb;
+	padding: 12px 0 11px;
+
+	.nav__logo {
+		display: flex;
+		align-items: center;
+		gap: 35px;
+	}
+
+	.nav__catalog {
+		margin-left: 85px;
+		padding: 11.5px 31px;
+		font-size: 18px;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
+	.nav__location {
+		margin-left: 47px;
+	}
+
+	.nav__email {
+		position: relative;
+		margin-left: 130px;
+		font-size: 18px;
+		font-weight: 500;
+
+		&::after {
+			content: url('../../img/ic_mail.svg');
+			position: absolute;
+			width: 25px;
+			height: 20px;
+			left: -40px;
+		}
+	}
+
+	.nav__whatsapp {
+		display: none;
+	}
+
+	.nav__phone {
+		position: relative;
+		margin-left: 56px;
+		font-size: 18px;
+		font-weight: 500;
+
+		&::after {
+			content: url('../../img/ic_phone.svg');
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: -40px;
+			opacity: 0.5;
+
+			@media only screen and (max-width: 320px) {
+				& {
+					position: relative;
+				}
+			}
+		}
+	}
+
+	.nav__burger {
+		display: none;
+	}
+
+	.nav__switch-lang {
+		margin-left: auto;
+		border-radius: 20px;
+		border: 3px solid #f3f8fb;
+		background: #f3f8fb;
+		display: flex;
+		gap: 0;
+
+		.nav__lang-eng,
+		.nav__lang-rus {
+			border: 3px solid #f3f8fb;
+			padding: 12.5px 12px;
+
+			&:not(.active) {
+				background: transparent;
+			}
+		}
+
+		.nav__lang-eng {
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+		}
+
+		.nav__lang-rus {
+			border-top-right-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+
+		.active {
+			background-color: #fff;
+		}
+	}
+
+	@media only screen and (max-width: 320px) {
+		.nav__logo-text,
+		.nav__catalog,
+		.nav__email,
+		.nav__phone-number,
+		.nav__switch-lang {
+			display: none;
+		}
+
+		.nav__whatsapp {
+			display: inline;
+			margin-left: 22px;
+		}
+
+		.nav__burger {
+			display: block;
+		}
+
+		& {
+			padding: 7px 0 0;
+			border-bottom: none;
+		}
+
+		.nav__logo img {
+			width: 50px;
+			height: 36px;
+		}
+
+		.nav__location {
+			margin-left: 35px;
+		}
+
+		.nav__phone {
+			margin-left: 68px;
+		}
+	}
+}

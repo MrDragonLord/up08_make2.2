@@ -1,0 +1,116 @@
+.header {
+	padding-top: 10px;
+
+	.breadcrumbs {
+		display: flex;
+		gap: 15px;
+
+		.breadcrumb__item {
+			position: relative;
+			a {
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 24px;
+			}
+
+			& + .breadcrumb__item:before {
+				content: '/';
+				position: absolute;
+				left: -12px;
+				font-size: 14px;
+				font-weight: 400;
+				top: 4px;
+			}
+
+			&:not(:first-child) a {
+				font-weight: 500;
+			}
+		}
+
+		@media only screen and (max-width: 320px) {
+			font-size: 12px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	.header__title {
+		font-size: 34px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-top: 26px;
+	}
+
+	.header__preview-video {
+		position: relative;
+		margin-top: 30px;
+		width: 100%;
+		height: 580px;
+		color: $text-color-block;
+		background-image: url('../../img/video__preview.png');
+		background-size: cover;
+		border-radius: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		.header__preview-title {
+			font-size: 36px;
+			font-weight: 700;
+		}
+
+		.header__preview-btn {
+			margin-top: 30px;
+			background-color: transparent;
+			display: flex;
+			align-items: center;
+			gap: 42px;
+			font-size: 20px;
+			font-weight: 500;
+		}
+
+		.header__socials {
+			position: absolute;
+			right: -210px;
+			display: flex;
+			flex-direction: column;
+			gap: 35px;
+
+			.header__social-item {
+				background-color: $background-color;
+				border-radius: 14px;
+				box-shadow: 4px 4px 50px 0px rgba(0, 0, 0, 0.1);
+				padding: 8px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 320px) {
+		.header__title {
+			font-size: 25.5px;
+			line-height: 36px;
+			margin-top: 20px;
+		}
+
+		.header__preview-video {
+			height: 247px;
+			margin-top: 20px;
+
+			.header__preview-title {
+				font-size: 20px;
+			}
+
+			.header__preview-btn {
+				margin-top: 30px;
+				background-color: transparent;
+				display: flex;
+				align-items: center;
+				gap: 18px;
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+	}
+}
